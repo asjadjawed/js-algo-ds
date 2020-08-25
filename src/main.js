@@ -1,7 +1,7 @@
-const check = () => "Check";
+const check = () => "JestTest";
 
 const main = () => {
-  console.log("Running!");
+  console.log("Happy Coding!");
 };
 
 main();
