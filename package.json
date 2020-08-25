@@ -1,0 +1,18 @@
+{
+  "name": "JSAlgoDS",
+  "version": "1.0.0",
+  "description": "Algorithms and Data Structures in JS",
+  "main": "src/main.js",
+  "repository": "git@github.com:asjadjawed/JSAlgoDS.git",
+  "author": "Asjad Jawed Siddiqui Qadri <asjadjawed@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon",
+    "test": "jest"
+  }
+}
