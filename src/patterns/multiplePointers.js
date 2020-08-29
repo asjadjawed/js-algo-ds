@@ -1,5 +1,5 @@
 /**
- * Finding a relation between multiple values in a array
+ * Finding a relation between multiple values in a (sorted / arranged) array or more info on the array / values
  * Multiple pointers are assigned that move towards the end or start or towards each other
  * based on the values they are pointing at
  */
@@ -21,6 +21,32 @@ const sumZero = (arr) => {
   }
 };
 
+/**
+ * Counts unique values in an array
+ * @param {Array} arr
+ */
+const countUnique = (arr) => {
+  if (!arr) throw new Error("Invalid Argument!");
+  if (arr.length === 0) return 0;
+  if (arr.length === 1) return 1;
+
+  let firstPointer = 0;
+  let secondPointer = 1;
+  let count = 1;
+
+  while (secondPointer < arr.length) {
+    if (arr[firstPointer] === arr[secondPointer]) secondPointer++;
+    else {
+      count++;
+      firstPointer = secondPointer;
+      secondPointer++;
+    }
+  }
+
+  return count;
+};
+
 module.exports = {
   sumZero,
+  countUnique,
 };
