@@ -19,6 +19,18 @@ const collectOddValues = (arr) => {
 };
 
 /**
+ * Returns odd values in an array (Default params pattern)
+ * Collect odd values - uses params to carry value
+ * @param {number[]} arr
+ */
+const collectOddValuesParam = (arr, result = []) => {
+  if (arr.length === 0) return [];
+  if (arr[0] % 2 !== 0) result.push(arr[0]);
+
+  return result.concat(collectOddValuesPure(arr.slice(1)));
+};
+
+/**
  * Returns odd values in an array
  * Collect odd values - pure recursion alternate
  * @param {number[]} arr
@@ -38,4 +50,5 @@ collectOddValues([1, 2, 3, 4, 5]);
 module.exports = {
   collectOddValues,
   collectOddValuesPure,
+  collectOddValuesParam,
 };
