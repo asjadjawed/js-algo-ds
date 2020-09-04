@@ -2,7 +2,7 @@
  * Sorts an array using bubble sort
  *
  * This has a complexity of O(n^2)
- * but if data is nearly sorted the complexity is almost O(n)
+ * but if data is nearly sorted the complexity is O(n)
  *
  * @param {number[]} arr
  */
