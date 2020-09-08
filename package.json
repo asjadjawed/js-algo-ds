@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "nodemon",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "coverage": "jest --coverage"
   }
 }
