@@ -25,6 +25,7 @@ test("check frequency counter - complex", () => {
 });
 
 test("anagram checker", () => {
+  expect(() => validAnagram()).toThrow();
   expect(validAnagram("", "")).toBeTruthy();
   expect(validAnagram("aaz", "zza")).toBeFalsy();
   expect(validAnagram("anagram", "nagaram")).toBeTruthy();
