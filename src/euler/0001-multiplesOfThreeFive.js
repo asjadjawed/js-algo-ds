@@ -18,13 +18,18 @@ const multiples35 = (n) => {
  * @param {number} n
  */
 const multiples35Faster = (n) => {
+  // counting the multiples below n
   const a = Math.floor((n - 1) / 3);
   const b = Math.floor((n - 1) / 5);
   const c = Math.floor((n - 1) / 15);
 
   return (
+    // shorthand for adding the multiples
+    // REMEMBER const addUpTo = (n) => (n * (n + 1)) / 2;
+    // we factor out the common multiple (a/b/c) here add up the other multiple 0...n
     Math.floor((3 * (a * (a + 1))) / 2) +
     Math.floor((5 * (b * (b + 1))) / 2) -
+    // removing the duplicates these were added by 3 and then again by 5
     Math.floor((15 * (c * (c + 1))) / 2)
   );
 };
