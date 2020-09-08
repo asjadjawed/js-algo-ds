@@ -15,4 +15,15 @@ const checkPalindrome = (str) => {
   return true;
 };
 
-module.exports = { checkPalindrome };
+/**
+ * Check palindrome via recursion
+ *
+ * @param {string} str
+ */
+const checkPalindromeRec = (str) => {
+  if (str.length <= 1) return true;
+  else if (str[0] !== str[str.length - 1]) return false;
+  return checkPalindromeRec(str.slice(1, str.length - 1));
+};
+
+module.exports = { checkPalindrome, checkPalindromeRec };
