@@ -1,4 +1,4 @@
-const { charCount } = require("./charCount");
+const { charCount, maxCharCount } = require("./charCount");
 
 test("Counts characters in a string - Simple", () => {
   expect(charCount("a")).toEqual({ a: 1 });
@@ -23,4 +23,15 @@ test("Counts characters in a string - Complex", () => {
 test("Counts characters in a string - Errors", () => {
   expect(() => charCount()).toThrowError("Invalid argument!");
   expect(() => charCount("")).toThrowError("Invalid argument!");
+});
+
+test("Max char count", () => {
+  expect(maxCharCount()).toBeUndefined();
+  expect(maxCharCount("")).toBeUndefined();
+  expect(maxCharCount("a")).toBe("a");
+  expect(maxCharCount("ab")).toBe("a");
+  expect(maxCharCount("abb")).toBe("b");
+  expect(maxCharCount("abba")).toBe("b");
+  expect(maxCharCount("ccccccc")).toBe("c");
+  expect(maxCharCount("Hello There!")).toBe("e");
 });

@@ -16,6 +16,31 @@ const charCount = (str) => {
   return countChars;
 };
 
+/**
+ * Returns the most repeated character in a string
+ * (Max characters in a string)
+ *
+ * @param {string} str
+ */
+const maxCharCount = (str) => {
+  if (!str) return;
+
+  const map = {};
+  let highest = 0;
+  let highestChar = "";
+
+  for (const c of str) {
+    map[c] ? map[c]++ : (map[c] = 1);
+
+    if (map[c] > highest) {
+      highestChar = c;
+      highest = map[c];
+    }
+  }
+  return highestChar;
+};
+
 module.exports = {
   charCount,
+  maxCharCount,
 };
