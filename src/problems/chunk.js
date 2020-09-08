@@ -21,6 +21,25 @@ const chunk = (arr, n) => {
   return chunked;
 };
 
+/**
+ * Returns nested array of chunk size n using slice
+ *
+ * @param {number[]} arr
+ * @param {number} n
+ */
+const chunkSlice = (arr, n) => {
+  let chunked = [];
+  let i = 0;
+
+  while (i < arr.length) {
+    chunked.push(arr.slice(i, i + n));
+    i += n;
+  }
+
+  return chunked;
+};
+
 module.exports = {
   chunk,
+  chunkSlice,
 };
