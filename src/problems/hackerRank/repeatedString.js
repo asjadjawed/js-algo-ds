@@ -11,7 +11,7 @@
  * @param {number} n
  */
 const repeatedString = (s, n) => {
-  let count = Math.floor(n / s.length) * (s.match(/a/g) || []).length;
+  let count = Math.floor(n / s.length) * s.match(/a/g).length;
   let remainder = s.slice(0, n % s.length);
   count += (remainder.match(/a/g) || []).length;
   return count;
