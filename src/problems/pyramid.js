@@ -1,5 +1,6 @@
 /**
  * Makes a pyramid of height n
+ * @param {number} n
  */
 const pyramid = (n) => {
   const width = n * 2 - 1;
