@@ -11,8 +11,8 @@ const pyramid = (n) => {
 
   for (let i = 1; i <= width; i += 2) {
     const floor = "#".repeat(i);
-    const gap = Math.floor(width - floor.length) / 2;
-    const step = " ".repeat(gap) + floor + " ".repeat(gap);
+    const gap = " ".repeat(Math.floor(width - floor.length) / 2);
+    const step = gap + floor + gap;
     console.log(step);
   }
 };
