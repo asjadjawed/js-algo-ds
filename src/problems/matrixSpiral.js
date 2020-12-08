@@ -1,7 +1,7 @@
 const makeEmptyGrid = (n) => {
   const emptyGrid = [];
   for (let i = 0; i < n; i++) {
-    emptyGrid.push(new Array(n).fill(0));
+    emptyGrid.push([]);
   }
   return emptyGrid;
 };
@@ -64,7 +64,6 @@ const spiralMatrix = (n) => {
     }
   }
 
-  console.log(limits);
   return result;
 };
 

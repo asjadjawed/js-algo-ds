@@ -5,9 +5,8 @@ test("matrix is a function", () => {
 });
 
 test("emptyGrid", () => {
-  const emptyGird = makeEmptyGrid(3);
-  expect(emptyGird.length === 3);
-  expect(emptyGird[0].length === 3);
+  const emptyGird = makeEmptyGrid(2);
+  expect(emptyGird.length).toBe(2);
 });
 
 test("matrix produces a 0x0 array", () => {
