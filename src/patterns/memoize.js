@@ -1,4 +1,12 @@
-// Generic memoization function
+/**
+ * This memoization pattern is used to cache result of compute heavy function
+ * The result is stored and returned instead of constant recalculation
+ */
+
+/**
+ * Generic Memoization Function
+ * @param {*} fn
+ */
 const memoize = (fn) => {
   const cache = {};
   return (...args) => {
