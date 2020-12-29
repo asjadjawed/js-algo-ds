@@ -100,6 +100,24 @@ class LinkedList {
     newNode.next = parentNode.next;
     parentNode.next = newNode;
   }
+
+  forEach(f) {
+    let current = this.head;
+
+    while (current) {
+      f(current);
+      current = current.next;
+    }
+  }
+
+  *[Symbol.iterator]() {
+    let node = this.head;
+
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
