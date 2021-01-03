@@ -9,4 +9,7 @@ function areThereDuplicates(...args) {
   return false;
 }
 
-module.exports = areThereDuplicates;
+const areThereDuplicatesOneLine = (...args) =>
+  new Set(args).size !== args.length;
+
+module.exports = { areThereDuplicates, areThereDuplicatesOneLine };
