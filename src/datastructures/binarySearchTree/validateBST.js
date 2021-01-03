@@ -8,4 +8,14 @@ const validate = (n, min = null, max = null) => {
   return true;
 };
 
-module.exports = validate;
+// my solution
+const validate2 = (n, min = null, max = null) => {
+  if (n === null) return true;
+
+  if (max !== null && n.data > max) return false;
+  if (min !== null && n.data < min) return false;
+
+  return validate2(n.left, min, n.data) && validate2(n.right, n.data, max);
+};
+
+module.exports = { validate, validate2 };
