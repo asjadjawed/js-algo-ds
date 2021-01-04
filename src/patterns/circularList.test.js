@@ -1,5 +1,5 @@
 const circular = require("./circularList");
-const L = require("../datastructures/linkedList/LinkedList");
+const L = require("../datastructures/linkedList/basic/LinkedList");
 const List = L.LinkedList;
 const Node = L.Node;
 

@@ -4,6 +4,14 @@ const main = () => {
   console.log("Happy Coding! Check the folders :)");
 };
 
+function fib(n) {
+  if (n <= 1) return n;
+
+  return fib(n - 1) + fib(n - 2);
+}
+
+console.log(fib(6));
+
 main();
 
 module.exports = {

@@ -1,5 +1,5 @@
 const midpoint = require("./midpoint.js");
-const L = require("../datastructures/linkedList/LinkedList");
+const L = require("../datastructures/linkedList/basic/LinkedList");
 // const Node = L.Node;
 const LinkedList = L.LinkedList;
 

@@ -1,5 +1,5 @@
 const fromLast = require("./nFromLast");
-const L = require("../datastructures/linkedList/LinkedList");
+const L = require("../datastructures/linkedList/basic/LinkedList");
 const List = L.LinkedList;
 
 test("fromLast is a function", () => {
