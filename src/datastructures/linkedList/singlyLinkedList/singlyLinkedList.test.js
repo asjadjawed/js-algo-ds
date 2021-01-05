@@ -104,3 +104,14 @@ describe("Shift value", () => {
     expect(l.head.data).toEqual("a");
   });
 });
+
+describe("unshift", () => {
+  test("appends a node to the start of the list", () => {
+    const l = new List();
+    l.unshift(1);
+    expect(l.head.data).toEqual(1);
+    l.unshift(2);
+    expect(l.head.data).toEqual(2);
+    expect(l.length).toEqual(2);
+  });
+});

@@ -68,6 +68,19 @@ class SinglyLinkedList {
     popped.next = null; // cutting reference from rest of list
     return popped;
   }
+
+  unshift(data) {
+    const newNode = new Node(data);
+
+    newNode.next = this.head;
+    this.head = newNode;
+
+    if (this.length === 0) this.tail = newNode;
+
+    this.length++;
+
+    return this;
+  }
 }
 
 module.exports = { SinglyLinkedList, Node };
