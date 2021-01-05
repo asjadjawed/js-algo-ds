@@ -231,3 +231,24 @@ describe("removing values", () => {
     expect(l.length).toBe(3);
   });
 });
+
+describe("reversing", () => {
+  let l;
+
+  beforeEach(() => {
+    l = new List();
+    l.push(0);
+    l.push(1);
+    l.push(2);
+    l.push(3);
+  });
+
+  test("reverse", () => {
+    l.reverse();
+    console.log(l);
+    expect(l.pop().data).toBe(0);
+    expect(l.pop().data).toBe(1);
+    expect(l.pop().data).toBe(2);
+    expect(l.pop().data).toBe(3);
+  });
+});

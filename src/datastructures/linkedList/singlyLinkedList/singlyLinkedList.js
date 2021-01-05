@@ -131,6 +131,28 @@ class SinglyLinkedList {
     removed.next = null;
     return removed;
   }
+
+  reverse() {
+    if (this.length === 0) return this;
+
+    let previous = null;
+    let current = this.head;
+    let next = current.next;
+
+    while (current) {
+      current.next = previous;
+
+      previous = current;
+      current = next;
+
+      if (!next) break;
+      next = next.next;
+    }
+
+    [this.head, this.tail] = [this.tail, this.head];
+
+    return this;
+  }
 }
 
 module.exports = { SinglyLinkedList, Node };
