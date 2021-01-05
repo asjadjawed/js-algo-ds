@@ -81,3 +81,26 @@ describe("Pop a value", () => {
     expect(l.head.next.data).toEqual("b");
   });
 });
+
+describe("Shift value", () => {
+  test("removes the first node when the list has a size of one", () => {
+    const l = new List();
+    l.push("a");
+    expect(l.shift().data).toBe("a");
+    expect(l.length).toEqual(0);
+    expect(l.head).toEqual(null);
+  });
+
+  test("removes the first node when the list has a size of three", () => {
+    const l = new List();
+    l.push("c");
+    l.push("b");
+    l.push("a");
+    expect(l.shift().data).toBe("c");
+    expect(l.length).toEqual(2);
+    expect(l.head.data).toEqual("b");
+    expect(l.shift().data).toBe("b");
+    expect(l.length).toEqual(1);
+    expect(l.head.data).toEqual("a");
+  });
+});
