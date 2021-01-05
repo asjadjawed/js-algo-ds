@@ -107,14 +107,29 @@ class SinglyLinkedList {
     if (index === this.length) return !!this.push(value);
     if (index === 0) return !!this.unshift(value);
 
-    const preInsertNode = this.get(index - 1);
+    const previous = this.get(index - 1);
     const newNode = new Node(value);
-    newNode.next = preInsertNode.next;
-    preInsertNode.next = newNode;
+    newNode.next = previous.next;
+    previous.next = newNode;
 
     this.length++;
 
     return true;
+  }
+
+  remove(index) {
+    if (index < 0 || index > this.length) return null;
+    if (index === this.length) return this.pop();
+    if (index === 0) return this.shift();
+
+    const previous = this.get(index - 1);
+    const removed = previous.next;
+    previous.next = removed.next;
+
+    this.length--;
+
+    removed.next = null;
+    return removed;
   }
 }
 

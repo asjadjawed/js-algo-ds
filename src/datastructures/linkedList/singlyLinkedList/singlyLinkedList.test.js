@@ -193,3 +193,41 @@ describe("inserting values", () => {
     expect(l.length).toBe(5);
   });
 });
+
+describe("removing values", () => {
+  let l;
+
+  beforeEach(() => {
+    l = new List();
+    l.push(0);
+    l.push(1);
+    l.push(2);
+    l.push(3);
+  });
+
+  test("invalid insert", () => {
+    expect(l.remove(1000, "a")).toBeNull();
+    expect(l.remove(-1000, "a")).toBeNull();
+  });
+
+  test("inserting at start", () => {
+    expect(l.remove(0).data).toBe(0);
+    expect(l.head.data).toBe(1);
+    expect(l.head.next.data).toBe(2);
+    expect(l.length).toBe(3);
+  });
+
+  test("inserting at end", () => {
+    expect(l.remove(l.length).data).toBe(3);
+    expect(l.tail.data).toBe(2);
+    expect(l.tail.next).toBeNull();
+    expect(l.length).toBe(3);
+  });
+
+  test("inserting in the middle", () => {
+    expect(l.remove(1).data).toBe(1);
+    expect(l.get(1).data).toBe(2);
+    expect(l.get(1).next.data).toBe(3);
+    expect(l.length).toBe(3);
+  });
+});
