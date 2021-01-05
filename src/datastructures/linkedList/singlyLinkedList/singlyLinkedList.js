@@ -139,16 +139,18 @@ class SinglyLinkedList {
     let current = this.head;
     let next = current.next;
 
-    while (current) {
+    // this stops before the last node
+    while (next) {
       current.next = previous;
 
       previous = current;
       current = next;
 
-      if (!next) break;
       next = next.next;
     }
 
+    // setting the last node's next
+    current.next = previous;
     [this.head, this.tail] = [this.tail, this.head];
 
     return this;
