@@ -5,4 +5,5 @@ test("check if subsequence", () => {
   expect(isSubsequence("sing", "sting")).toBeTruthy();
   expect(isSubsequence("abc", "abracadabra")).toBeTruthy();
   expect(isSubsequence("abc", "acb")).toBeFalsy();
+  expect(isSubsequence("abc", "")).toBe(false);
 });
