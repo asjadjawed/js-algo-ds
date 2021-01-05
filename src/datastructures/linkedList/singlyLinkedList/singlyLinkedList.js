@@ -92,6 +92,15 @@ class SinglyLinkedList {
 
     return pointer;
   }
+
+  set(index, value) {
+    const toSet = this.get(index);
+
+    if (!toSet) return false;
+
+    toSet.data = value;
+    return true;
+  }
 }
 
 module.exports = { SinglyLinkedList, Node };

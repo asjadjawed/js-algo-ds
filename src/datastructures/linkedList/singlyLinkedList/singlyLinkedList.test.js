@@ -117,7 +117,7 @@ describe("unshift", () => {
 });
 
 describe("get index", () => {
-  test("", () => {
+  test("get index from ll", () => {
     const l = new List();
     expect(l.get(10)).toBeNull();
     expect(l.get(-1)).toBeNull();
@@ -131,5 +131,27 @@ describe("get index", () => {
     expect(l.get(1).data).toBe(1);
     expect(l.get(2).data).toBe(2);
     expect(l.get(3).data).toBe(3);
+  });
+});
+
+describe("set index with value", () => {
+  test("set value in ll with index", () => {
+    const l = new List();
+    expect(l.set(10, "a")).toBeFalsy();
+    expect(l.set(-1, "c")).toBeFalsy();
+
+    l.push(0);
+    expect(l.set(0, "a")).toBeTruthy();
+    l.push(1);
+    l.set(1, "b");
+    l.push(2);
+    l.set(2, "c");
+    l.push(3);
+    l.set(3, "d");
+
+    expect(l.get(0).data).toBe("a");
+    expect(l.get(1).data).toBe("b");
+    expect(l.get(2).data).toBe("c");
+    expect(l.get(3).data).toBe("d");
   });
 });
