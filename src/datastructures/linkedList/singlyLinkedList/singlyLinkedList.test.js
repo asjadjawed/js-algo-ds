@@ -245,7 +245,6 @@ describe("reversing", () => {
 
   test("reverse", () => {
     l.reverse();
-    console.log(l);
     expect(l.pop().data).toBe(0);
     expect(l.pop().data).toBe(1);
     expect(l.pop().data).toBe(2);
