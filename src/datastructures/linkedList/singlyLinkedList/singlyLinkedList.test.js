@@ -155,3 +155,41 @@ describe("set index with value", () => {
     expect(l.get(3).data).toBe("d");
   });
 });
+
+describe("inserting values", () => {
+  let l;
+
+  beforeEach(() => {
+    l = new List();
+    l.push(0);
+    l.push(1);
+    l.push(2);
+    l.push(3);
+  });
+
+  test("invalid insert", () => {
+    expect(l.insert(1000, "a")).toBe(false);
+    expect(l.insert(-1000, "a")).toBe(false);
+  });
+
+  test("inserting at start", () => {
+    expect(l.insert(0, "a")).toBe(true);
+    expect(l.head.data).toBe("a");
+    expect(l.head.next.data).toBe(0);
+    expect(l.length).toBe(5);
+  });
+
+  test("inserting at end", () => {
+    expect(l.insert(l.length, "a")).toBe(true);
+    expect(l.tail.data).toBe("a");
+    expect(l.tail.next).toBeNull();
+    expect(l.length).toBe(5);
+  });
+
+  test("inserting in the middle", () => {
+    expect(l.insert(1, "a")).toBe(true);
+    expect(l.get(1).data).toBe("a");
+    expect(l.get(1).next.data).toBe(1);
+    expect(l.length).toBe(5);
+  });
+});
