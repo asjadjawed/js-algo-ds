@@ -115,3 +115,21 @@ describe("unshift", () => {
     expect(l.length).toEqual(2);
   });
 });
+
+describe("get index", () => {
+  test("", () => {
+    const l = new List();
+    expect(l.get(10)).toBeNull();
+    expect(l.get(-1)).toBeNull();
+
+    l.push(0);
+    l.push(1);
+    l.push(2);
+    l.push(3);
+
+    expect(l.get(0).data).toBe(0);
+    expect(l.get(1).data).toBe(1);
+    expect(l.get(2).data).toBe(2);
+    expect(l.get(3).data).toBe(3);
+  });
+});
