@@ -18,8 +18,6 @@ const averagePair = (arr, avg) => {
 
     if (i === -1 || j === arr.length) return false;
   }
-
-  return true;
 };
 
 module.exports = averagePair;
