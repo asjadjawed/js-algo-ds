@@ -52,7 +52,8 @@ class BinarySearchTree {
     return null;
   }
 
-  breadthFirstSearch() {
+  BFS() {
+    // breadthFirstSearch
     let q = [];
     let visited = [];
     q.push(this.root);
@@ -63,6 +64,53 @@ class BinarySearchTree {
       if (current.left) q.push(current.left);
       if (current.right) q.push(current.right);
     }
+
+    return visited;
+  }
+
+  DFSPreOrder() {
+    // Depth First Search Pre-Order
+    // recursive solution, for iterative check tree data structure using stacks
+    if (!this.root) return [];
+    const visited = [];
+
+    const traverse = (node) => {
+      visited.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(this.root);
+
+    return visited;
+  }
+
+  DFSPostOrder() {
+    if (!this.root) return [];
+    const visited = [];
+
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      visited.push(node.value);
+    };
+
+    traverse(this.root);
+
+    return visited;
+  }
+
+  DFSInOrder() {
+    if (!this.root) return [];
+    const visited = [];
+
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
+      visited.push(node.value);
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(this.root);
 
     return visited;
   }

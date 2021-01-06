@@ -47,15 +47,33 @@ test("Contains returns null if value not found", () => {
   expect(bst.find(9999)).toEqual(null);
 });
 
-test("Breadth first search", () => {
-  const bst = new BST();
+describe("testing tree search", () => {
+  let bst;
 
-  bst.insert(10);
-  bst.insert(6);
-  bst.insert(15);
-  bst.insert(3);
-  bst.insert(8);
-  bst.insert(20);
+  beforeEach(() => {
+    bst = new BST();
 
-  expect(bst.breadthFirstSearch()).toEqual([10, 6, 15, 3, 8, 20]);
+    bst.insert(10);
+    bst.insert(6);
+    bst.insert(15);
+    bst.insert(3);
+    bst.insert(8);
+    bst.insert(20);
+  });
+
+  test("Breadth first search", () => {
+    expect(bst.BFS()).toEqual([10, 6, 15, 3, 8, 20]);
+  });
+
+  test("Depth first search - Pre Order", () => {
+    expect(bst.DFSPreOrder()).toEqual([10, 6, 3, 8, 15, 20]);
+  });
+
+  test("Depth first search - Post Order", () => {
+    expect(bst.DFSPostOrder()).toEqual([3, 8, 6, 20, 15, 10]);
+  });
+
+  test("Depth first search - In Order", () => {
+    expect(bst.DFSInOrder()).toEqual([3, 6, 8, 10, 15, 20]);
+  });
 });
