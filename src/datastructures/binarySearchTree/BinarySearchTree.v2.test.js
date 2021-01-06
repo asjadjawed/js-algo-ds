@@ -46,3 +46,16 @@ test("Contains returns null if value not found", () => {
 
   expect(bst.find(9999)).toEqual(null);
 });
+
+test("Breadth first search", () => {
+  const bst = new BST();
+
+  bst.insert(10);
+  bst.insert(6);
+  bst.insert(15);
+  bst.insert(3);
+  bst.insert(8);
+  bst.insert(20);
+
+  expect(bst.breadthFirstSearch()).toEqual([10, 6, 15, 3, 8, 20]);
+});
