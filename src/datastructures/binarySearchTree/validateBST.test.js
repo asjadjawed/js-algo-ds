@@ -1,4 +1,4 @@
-const Node = require("./binarySearchTree");
+const Node = require("./BinarySearchTree");
 const { validate, validate2 } = require("./validateBST");
 
 test("Validate recognizes a valid BST", () => {

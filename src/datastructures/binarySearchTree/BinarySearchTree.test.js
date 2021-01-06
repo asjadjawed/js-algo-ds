@@ -1,4 +1,4 @@
-const Node = require("./binarySearchTree");
+const Node = require("./BinarySearchTree");
 
 test("Node is a constructor", () => {
   expect(typeof Node.prototype.constructor).toEqual("function");

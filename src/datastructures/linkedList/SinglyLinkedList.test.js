@@ -1,4 +1,4 @@
-const L = require("./LinkedList");
+const L = require("./SinglyLinkedList");
 const List = L.LinkedList;
 const Node = L.Node;
 

@@ -1,4 +1,4 @@
-const Node = require("../../datastructures/tree/tree").Node;
+const Node = require("../../datastructures/tree/Tree").Node;
 const levelWidth = require("./treeLevelWidth");
 
 test("levelWidth is a function", () => {
