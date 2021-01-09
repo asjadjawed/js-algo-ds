@@ -33,6 +33,65 @@ class Graph {
     for (const i of this.adjacencyList[v]) this.removeEdge(v, i);
     delete this.adjacencyList[v];
   }
+
+  dfsRecursive(v) {
+    const result = [];
+    const visited = new Set();
+
+    const visit = (x) => {
+      if (this.adjacencyList[x].length === 0) return;
+      result.push(x);
+      visited.add(x);
+      for (const c of this.adjacencyList[x]) if (!visited.has(c)) visit(c);
+    };
+
+    visit(v);
+    return result;
+  }
+
+  dfsIterative(v) {
+    const result = [];
+    const visited = new Set();
+
+    let current = v;
+    let stack = [current];
+
+    while (stack.length) {
+      if (visited.has(current)) {
+        stack.shift();
+        current = stack[0];
+        continue;
+      } else {
+        visited.add(current);
+        result.push(current);
+        stack = [...this.adjacencyList[current], ...stack];
+
+        current = stack[0];
+      }
+    }
+
+    return result;
+  }
+
+  bfs(v) {
+    const result = [];
+    const visited = new Set();
+
+    let q = [v];
+
+    while (q.length) {
+      const current = q.shift();
+
+      if (visited.has(current)) continue;
+      else {
+        result.push(current);
+        visited.add(current);
+        q = [...q, ...this.adjacencyList[current]];
+      }
+    }
+
+    return result;
+  }
 }
 
 module.exports = Graph;

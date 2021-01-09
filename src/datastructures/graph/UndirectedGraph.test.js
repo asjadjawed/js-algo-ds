@@ -66,3 +66,37 @@ describe("Adding a vertex and edge", () => {
     expect(g.adjacencyList["b"].includes("a")).toBe(true);
   });
 });
+
+describe("graph traversal", () => {
+  let g;
+
+  beforeEach(() => {
+    g = new Graph();
+    g.addVertex("a");
+    g.addVertex("b");
+    g.addVertex("c");
+    g.addVertex("d");
+    g.addVertex("e");
+    g.addVertex("f");
+
+    g.addEdge("a", "b");
+    g.addEdge("a", "c");
+    g.addEdge("b", "d");
+    g.addEdge("c", "e");
+    g.addEdge("d", "e");
+    g.addEdge("d", "f");
+    g.addEdge("e", "f");
+  });
+
+  test("recursive dfs", () => {
+    expect(g.dfsRecursive("a")).toEqual(["a", "b", "d", "e", "c", "f"]);
+  });
+
+  test("iterative dfs", () => {
+    expect(g.dfsIterative("a")).toEqual(["a", "b", "d", "e", "c", "f"]);
+  });
+
+  test("iterative bfs", () => {
+    expect(g.bfs("a")).toEqual(["a", "b", "c", "d", "e", "f"]);
+  });
+});
