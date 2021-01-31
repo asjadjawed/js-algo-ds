@@ -1,3 +1,6 @@
+// number of ways to travel through a grid (m x n) starting from top left
+// going to bottom right, can only move down or right
+
 const gridTraveler = (m, n, memo = {}) => {
   const key = `${m},${n}`;
   if (key in memo) return memo[key];
