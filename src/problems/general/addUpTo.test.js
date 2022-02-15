@@ -1,6 +1,6 @@
-const { addUpTo, addUpToIter } = require("./addUpTo");
+const { addUpTo, addUpToIter } = require('./addUpTo');
 
-test("Test for add up to number - n", () => {
+test('Test for add up to number - n', () => {
   expect(addUpTo(0)).toEqual(0);
   expect(addUpTo(1)).toEqual(1);
   expect(addUpTo(2)).toEqual(3);
@@ -10,7 +10,7 @@ test("Test for add up to number - n", () => {
   expect(addUpTo(100000000)).toEqual(5000000050000000);
 });
 
-test("Test for add up to number - n. Uses Iteration", () => {
+test('Test for add up to number - n. Uses Iteration', () => {
   expect(addUpToIter(0)).toEqual(0);
   expect(addUpToIter(1)).toEqual(1);
   expect(addUpToIter(2)).toEqual(3);

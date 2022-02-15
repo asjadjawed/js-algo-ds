@@ -1,6 +1,6 @@
-const { pivot, quickSort } = require("./quickSort");
+const { pivot, quickSort } = require('./quickSort');
 
-test("pivot for quick sort", () => {
+test('pivot for quick sort', () => {
   expect(pivot([])).toBe(0);
   expect(pivot([1])).toBe(0);
   expect(pivot([3, 1, 2, 4])).toBe(2);
@@ -8,7 +8,7 @@ test("pivot for quick sort", () => {
   expect(pivot([0, -1, -21, -31])).toBe(3);
 });
 
-test("Quick Sort", () => {
+test('Quick Sort', () => {
   expect(quickSort([])).toEqual([]);
   expect(quickSort([4])).toEqual([4]);
   expect(quickSort([4, 300, 62])).toEqual([4, 62, 300]);

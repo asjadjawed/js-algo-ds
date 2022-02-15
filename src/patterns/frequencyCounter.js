@@ -10,7 +10,7 @@
  * @param {Array} arr2
  */
 const squaredArrayCheck = (arr1, arr2) => {
-  if (!arr1 || !arr2) throw new Error("Invalid Argument!");
+  if (!arr1 || !arr2) throw new Error('Invalid Argument!');
   if (arr1.length != arr2.length) return false;
 
   const numFrequency = {};
@@ -33,8 +33,8 @@ const squaredArrayCheck = (arr1, arr2) => {
  * @param {string} str2
  */
 const validAnagram = (str1, str2) => {
-  if (str1 === "" && str2 === "") return true;
-  if (!str1 || !str2) throw new Error("Invalid Argument!");
+  if (str1 === '' && str2 === '') return true;
+  if (!str1 || !str2) throw new Error('Invalid Argument!');
   if (str1.length != str2.length) return false;
 
   const charFrequency = {};
@@ -53,5 +53,5 @@ const validAnagram = (str1, str2) => {
 
 module.exports = {
   squaredArrayCheck,
-  validAnagram,
+  validAnagram
 };

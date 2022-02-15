@@ -1,10 +1,10 @@
-const Queue = require("./Queue");
+const Queue = require('./Queue');
 
-test("Queue is a class", () => {
-  expect(typeof Queue.prototype.constructor).toEqual("function");
+test('Queue is a class', () => {
+  expect(typeof Queue.prototype.constructor).toEqual('function');
 });
 
-test("can add elements to a queue and check peek", () => {
+test('can add elements to a queue and check peek', () => {
   const q = new Queue();
   expect(() => {
     q.add(1);
@@ -12,13 +12,13 @@ test("can add elements to a queue and check peek", () => {
   expect(q.peek()).toBe(1);
 });
 
-test("Queue Ops and State", () => {
+test('Queue Ops and State', () => {
   const q = new Queue();
   q.add(1);
   expect(q.remove(1)).toBe(1);
 });
 
-test("Order of elements is maintained", () => {
+test('Order of elements is maintained', () => {
   const q = new Queue();
   q.add(1);
   q.add(2);

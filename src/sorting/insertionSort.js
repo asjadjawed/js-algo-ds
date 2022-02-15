@@ -39,5 +39,5 @@ const insertionSort2 = (arr) => {
 
 module.exports = {
   insertionSort,
-  insertionSort2,
+  insertionSort2
 };

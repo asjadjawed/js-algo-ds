@@ -11,7 +11,7 @@ const lengthOfLongestSubstring = function (s) {
 
   let hash = {
     [s[i]]: i,
-    [s[j]]: j,
+    [s[j]]: j
   };
 
   while (j < s.length) {

@@ -34,5 +34,5 @@ const fibRecur = memoize(fibCalc);
 
 module.exports = {
   fib,
-  fibRecur,
+  fibRecur
 };

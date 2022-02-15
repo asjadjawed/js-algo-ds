@@ -18,5 +18,5 @@ const repeatedString = (s, n) => {
 };
 
 module.exports = {
-  repeatedString,
+  repeatedString
 };

@@ -3,7 +3,7 @@
  * @param {string} str
  */
 const charCount = (str) => {
-  if (!str) throw new Error("Invalid argument!");
+  if (!str) throw new Error('Invalid argument!');
 
   const countChars = {};
 
@@ -27,7 +27,7 @@ const maxCharCount = (str) => {
 
   const map = {};
   let highest = 0;
-  let highestChar = "";
+  let highestChar = '';
 
   for (const c of str) {
     map[c] ? map[c]++ : (map[c] = 1);
@@ -42,5 +42,5 @@ const maxCharCount = (str) => {
 
 module.exports = {
   charCount,
-  maxCharCount,
+  maxCharCount
 };

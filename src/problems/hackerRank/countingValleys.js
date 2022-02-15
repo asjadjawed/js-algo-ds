@@ -14,7 +14,7 @@ const countingValleys = (s) => {
   let inValley = false;
 
   for (const c of s) {
-    if (c === "D") elevation--;
+    if (c === 'D') elevation--;
     else elevation++;
 
     if (!inValley && elevation < 0) {
@@ -29,5 +29,5 @@ const countingValleys = (s) => {
 };
 
 module.exports = {
-  countingValleys,
+  countingValleys
 };

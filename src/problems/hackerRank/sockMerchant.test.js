@@ -1,6 +1,6 @@
-const { sockMerchant } = require("./sockMerchant");
+const { sockMerchant } = require('./sockMerchant');
 
-test("SockMerchant", () => {
+test('SockMerchant', () => {
   expect(sockMerchant(0, [])).toBe(0);
   expect(sockMerchant(5, [1, 1, 1, 1, 1])).toBe(2);
   expect(sockMerchant(6, [1, 2, 3, 1, 2, 3])).toBe(3);

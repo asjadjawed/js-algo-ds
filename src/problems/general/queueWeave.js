@@ -1,4 +1,4 @@
-const Queue = require("../../datastructures/queue/Queue");
+const Queue = require('../../datastructures/queue/Queue');
 
 /**
  * Weaves 2 queues

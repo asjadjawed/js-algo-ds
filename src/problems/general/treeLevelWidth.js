@@ -1,5 +1,5 @@
 const levelWidth = (node) => {
-  const L = "L";
+  const L = 'L';
   const counter = [1, 0];
   let q = [...node.children, L];
 

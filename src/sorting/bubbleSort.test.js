@@ -1,6 +1,6 @@
-const { bubbleSort } = require("./bubbleSort");
+const { bubbleSort } = require('./bubbleSort');
 
-test("Bubble Sort", () => {
+test('Bubble Sort', () => {
   expect(bubbleSort([])).toEqual([]);
   expect(bubbleSort([4])).toEqual([4]);
   expect(bubbleSort([4, 300, 62])).toEqual([4, 62, 300]);

@@ -8,13 +8,13 @@ var backspaceCompare = function (S, T) {
   let t = T.length - 1;
 
   const backSpace = (I, i) => {
-    if (I[i] === "#") {
+    if (I[i] === '#') {
       let removeChar = 2;
 
       while (removeChar > 0) {
         i--;
         removeChar--;
-        if (I[i] === "#") removeChar += 2;
+        if (I[i] === '#') removeChar += 2;
       }
     }
 

@@ -1,6 +1,6 @@
-const { intReverseSilly, intReverse } = require("./intReverse");
+const { intReverseSilly, intReverse } = require('./intReverse');
 
-test("reverse an integer", () => {
+test('reverse an integer', () => {
   expect(intReverseSilly(0)).toEqual(0);
   expect(intReverseSilly(1)).toEqual(1);
   expect(intReverseSilly(100)).toEqual(1);
@@ -9,7 +9,7 @@ test("reverse an integer", () => {
   expect(intReverseSilly(-90)).toEqual(-9);
 });
 
-test("reverse an integer", () => {
+test('reverse an integer', () => {
   expect(intReverse(0)).toEqual(0);
   expect(intReverse(1)).toEqual(1);
   expect(intReverse(123)).toEqual(321);

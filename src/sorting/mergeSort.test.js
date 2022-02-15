@@ -1,6 +1,6 @@
-const { merge, mergeSort } = require("./mergeSort");
+const { merge, mergeSort } = require('./mergeSort');
 
-test("Merge - sub-process", () => {
+test('Merge - sub-process', () => {
   expect(merge([], [])).toEqual([]);
   expect(merge([], [1])).toEqual([1]);
   expect(merge([1], [])).toEqual([1]);
@@ -13,7 +13,7 @@ test("Merge - sub-process", () => {
   expect(merge([-1, -1, -1], [-1, -1, 10])).toEqual([-1, -1, -1, -1, -1, 10]);
 });
 
-test("Merge Sort", () => {
+test('Merge Sort', () => {
   expect(mergeSort([])).toEqual([]);
   expect(mergeSort([4])).toEqual([4]);
   expect(mergeSort([4, 300, 62])).toEqual([4, 62, 300]);

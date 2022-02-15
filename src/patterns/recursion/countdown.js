@@ -5,5 +5,5 @@ const countdown = (n) => {
 };
 
 module.exports = {
-  countdown,
+  countdown
 };

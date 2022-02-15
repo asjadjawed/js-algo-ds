@@ -1,11 +1,11 @@
-const Node = require("../../datastructures/tree/Tree").Node;
-const levelWidth = require("./treeLevelWidth");
+const Node = require('../../datastructures/tree/Tree').Node;
+const levelWidth = require('./treeLevelWidth');
 
-test("levelWidth is a function", () => {
-  expect(typeof levelWidth).toEqual("function");
+test('levelWidth is a function', () => {
+  expect(typeof levelWidth).toEqual('function');
 });
 
-test("levelWidth returns number of nodes at widest point", () => {
+test('levelWidth returns number of nodes at widest point', () => {
   const root = new Node(0);
   root.add(1);
   root.add(2);
@@ -16,7 +16,7 @@ test("levelWidth returns number of nodes at widest point", () => {
   expect(levelWidth(root)).toEqual([1, 3, 2]);
 });
 
-test("levelWidth returns number of nodes at widest point", () => {
+test('levelWidth returns number of nodes at widest point', () => {
   const root = new Node(0);
   root.add(1);
   root.children[0].add(2);

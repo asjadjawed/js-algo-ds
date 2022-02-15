@@ -41,5 +41,5 @@ const chunkSlice = (arr, n) => {
 
 module.exports = {
   chunk,
-  chunkSlice,
+  chunkSlice
 };

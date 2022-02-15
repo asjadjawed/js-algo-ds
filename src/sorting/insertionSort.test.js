@@ -1,6 +1,6 @@
-const { insertionSort, insertionSort2 } = require("./insertionSort");
+const { insertionSort, insertionSort2 } = require('./insertionSort');
 
-test("Insertion Sort", () => {
+test('Insertion Sort', () => {
   expect(insertionSort([])).toEqual([]);
   expect(insertionSort([4])).toEqual([4]);
   expect(insertionSort([4, 300, 62])).toEqual([4, 62, 300]);
@@ -11,7 +11,7 @@ test("Insertion Sort", () => {
   expect(insertionSort([10, 5, 5, 3])).toEqual([3, 5, 5, 10]);
 });
 
-test("Insertion Sort", () => {
+test('Insertion Sort', () => {
   expect(insertionSort2([])).toEqual([]);
   expect(insertionSort2([4])).toEqual([4]);
   expect(insertionSort2([4, 300, 62])).toEqual([4, 62, 300]);

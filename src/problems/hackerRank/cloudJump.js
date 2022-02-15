@@ -23,5 +23,5 @@ const jumpingOnClouds = (c) => {
 };
 
 module.exports = {
-  jumpingOnClouds,
+  jumpingOnClouds
 };

@@ -8,7 +8,7 @@ const minimumBribesSlow = (q) => {
 
     if (q[i] - p > 2) {
       // console.log("Too chaotic");
-      return "Too chaotic";
+      return 'Too chaotic';
     }
 
     for (let j = i + 1; j < q.length; j++) if (q[j] < q[i]) totalBribes++;
@@ -38,7 +38,7 @@ const minimumBribes = (q) => {
       e3++;
     } else {
       // console.log("Too chaotic");
-      return "Too chaotic";
+      return 'Too chaotic';
     }
   }
   // console.log(totalBribes);
@@ -61,7 +61,7 @@ const minimumBribesSwapping = (q) => {
         q[i - 1] = q[i];
         q[i] = position;
       } else {
-        return "Too chaotic";
+        return 'Too chaotic';
       }
     }
   }

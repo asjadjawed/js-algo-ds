@@ -11,5 +11,5 @@ const linearSearch = (arr, value) => {
 };
 
 module.exports = {
-  linearSearch,
+  linearSearch
 };

@@ -4,7 +4,7 @@
  * @param {number} int
  */
 const intReverseSilly = (int) => {
-  return Math.sign(int) * parseInt(int.toString().split("").reverse().join(""));
+  return Math.sign(int) * parseInt(int.toString().split('').reverse().join(''));
 };
 
 /**
@@ -29,5 +29,5 @@ const intReverse = (int) => {
 
 module.exports = {
   intReverseSilly,
-  intReverse,
+  intReverse
 };

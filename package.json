@@ -1,19 +1,24 @@
 {
-  "name": "JSAlgoDS",
+  "name": "js-algo-ds",
   "version": "1.0.0",
   "description": "Algorithms and Data Structures in JS",
   "main": "src/main.js",
-  "repository": "git@github.com:asjadjawed/JSAlgoDS.git",
+  "repository": "git@github.com:asjadjawed/js-algo-ds.git",
   "author": "Asjad Jawed Siddiqui Qadri <asjadjawed@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^7.7.0",
-    "jest": "^26.4.2",
-    "nodemon": "^2.0.4"
+    "eslint": "^8.4.1",
+    "jest": "^27.4.4",
+    "nodemon": "^2.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
   },
   "scripts": {
-    "start": "nodemon",
-    "test": "jest --watch",
-    "coverage": "jest --coverage"
+    "dev": "nodemon",
+    "start": "node src/index.js",
+    "test": "jest",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --config .prettierrc '**/*.js' --write"
   }
 }

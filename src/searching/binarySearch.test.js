@@ -1,6 +1,6 @@
-const { binarySearch } = require("./binarySearch");
+const { binarySearch } = require('./binarySearch');
 
-test("binary search for value in sorted array", () => {
+test('binary search for value in sorted array', () => {
   expect(binarySearch([], 10)).toBe(-1);
   expect(binarySearch([10], 10)).toBe(0);
   expect(binarySearch([1, 2, 3, 4, 5, 6], 10)).toBe(-1);

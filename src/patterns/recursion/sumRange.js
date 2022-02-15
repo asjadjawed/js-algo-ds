@@ -9,5 +9,5 @@ const sumRange = (n) => {
 };
 
 module.exports = {
-  sumRange,
+  sumRange
 };

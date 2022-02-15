@@ -1,6 +1,6 @@
-const { countdown } = require("./countdown");
+const { countdown } = require('./countdown');
 
-test("console.log - test", () => {
+test('console.log - test', () => {
   console.log = jest.fn();
   countdown(5);
 
@@ -12,6 +12,6 @@ test("console.log - test", () => {
   expect(console.log.mock.calls[5][0]).toBe(0);
 });
 
-test("console.log - test", () => {
+test('console.log - test', () => {
   expect(countdown(-100)).toBeUndefined();
 });

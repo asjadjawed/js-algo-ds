@@ -1,5 +1,5 @@
-const { check } = require("./main");
+const { check } = require('./main');
 
-test("Jest Check", () => {
-  expect(check()).toEqual("JestTest");
+test('Jest Check', () => {
+  expect(check()).toEqual('JestTest');
 });

@@ -37,5 +37,5 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
 
 module.exports = {
   pivot,
-  quickSort,
+  quickSort
 };

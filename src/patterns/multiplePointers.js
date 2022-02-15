@@ -26,7 +26,7 @@ const sumZero = (arr) => {
  * @param {Array} arr
  */
 const countUnique = (arr) => {
-  if (!arr) throw new Error("Invalid Argument!");
+  if (!arr) throw new Error('Invalid Argument!');
   if (arr.length === 0) return 0;
   if (arr.length === 1) return 1;
 
@@ -48,5 +48,5 @@ const countUnique = (arr) => {
 
 module.exports = {
   sumZero,
-  countUnique,
+  countUnique
 };

@@ -23,5 +23,5 @@ const factorialRecur = (n) => {
 
 module.exports = {
   factorialIter,
-  factorialRecur,
+  factorialRecur
 };

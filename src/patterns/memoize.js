@@ -28,5 +28,5 @@ let fibRecur = (n) => {
 fibRecur = memoize(fibRecur); // re-assigning the function names so calls are now to the memoized function
 
 module.exports = {
-  fibRecur,
+  fibRecur
 };

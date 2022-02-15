@@ -12,7 +12,7 @@ const spiralMatrix = (n) => {
     startRow: 0,
     endRow: n - 1,
     startCol: 0,
-    endCol: n - 1,
+    endCol: n - 1
   };
 
   const cursor = [0, 0];

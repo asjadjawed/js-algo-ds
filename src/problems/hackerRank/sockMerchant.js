@@ -23,5 +23,5 @@ const sockMerchant = (n, ar) => {
 };
 
 module.exports = {
-  sockMerchant,
+  sockMerchant
 };

@@ -1,6 +1,6 @@
-const { QuickFind } = require("./QuickFind");
+const { QuickFind } = require('./QuickFind');
 
-test("QuickFind Class", () => {
+test('QuickFind Class', () => {
   const qf = new QuickFind(5);
   expect(qf.data.length).toEqual(5);
   expect(qf.connected(1, 2)).toBeFalsy();

@@ -1,6 +1,6 @@
-const { selectionSort } = require("./selectionSort");
+const { selectionSort } = require('./selectionSort');
 
-test("Selection Sort", () => {
+test('Selection Sort', () => {
   expect(selectionSort([])).toEqual([]);
   expect(selectionSort([4])).toEqual([4]);
   expect(selectionSort([4, 300, 62])).toEqual([4, 62, 300]);

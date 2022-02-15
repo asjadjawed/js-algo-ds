@@ -24,5 +24,5 @@ class QuickUnion {
 }
 
 module.exports = {
-  QuickUnion,
+  QuickUnion
 };

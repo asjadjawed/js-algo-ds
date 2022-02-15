@@ -14,5 +14,5 @@ const stringSearch = (str, subStr) => {
 };
 
 module.exports = {
-  stringSearch,
+  stringSearch
 };

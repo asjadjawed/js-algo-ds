@@ -1,6 +1,6 @@
 // https://adventofcode.com/2015/day/2
 
-const { readFileSync } = require("fs");
+const { readFileSync } = require('fs');
 
 /**
  * @param {Number[]} dimensions
@@ -21,12 +21,12 @@ const getRibbon = (dimensions) => {
   return lengthOfRibbon + bow;
 };
 
-const totals = (file = "./wrappingPaper.data.txt", f) => {
+const totals = (file = './wrappingPaper.data.txt', f) => {
   const data = readFileSync(file);
   let dimensions = data
     .toString()
-    .split("\n")
-    .map((d) => d.split("x"));
+    .split('\n')
+    .map((d) => d.split('x'));
 
   let totalPaper = 0;
   for (const d of dimensions) totalPaper += f(d);

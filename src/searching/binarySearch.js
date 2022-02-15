@@ -19,5 +19,5 @@ const binarySearch = (arr, value) => {
 };
 
 module.exports = {
-  binarySearch,
+  binarySearch
 };

@@ -25,5 +25,5 @@ const maxSubArraySum = (arr, n) => {
 };
 
 module.exports = {
-  maxSubArraySum,
+  maxSubArraySum
 };

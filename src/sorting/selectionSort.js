@@ -17,5 +17,5 @@ const selectionSort = (arr) => {
 };
 
 module.exports = {
-  selectionSort,
+  selectionSort
 };

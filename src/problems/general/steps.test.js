@@ -1,56 +1,56 @@
-const { steps, stepsRecur } = require("./steps");
+const { steps, stepsRecur } = require('./steps');
 
 beforeEach(() => {
-  jest.spyOn(console, "log");
+  jest.spyOn(console, 'log');
 });
 
 afterEach(() => {
   console.log.mockRestore();
 });
 
-test("steps is a function", () => {
-  expect(typeof steps).toEqual("function");
-  expect(typeof stepsRecur).toEqual("function");
+test('steps is a function', () => {
+  expect(typeof steps).toEqual('function');
+  expect(typeof stepsRecur).toEqual('function');
 });
 
-test("steps called with n = 1", () => {
+test('steps called with n = 1', () => {
   steps(1);
-  expect(console.log.mock.calls[0][0]).toEqual("#");
+  expect(console.log.mock.calls[0][0]).toEqual('#');
   expect(console.log.mock.calls.length).toEqual(1);
 });
 
-test("steps called with n = 1 (recur)", () => {
+test('steps called with n = 1 (recur)', () => {
   stepsRecur(1);
-  expect(console.log.mock.calls[0][0]).toEqual("#");
+  expect(console.log.mock.calls[0][0]).toEqual('#');
   expect(console.log.mock.calls.length).toEqual(1);
 });
 
-test("steps called with n = 2", () => {
+test('steps called with n = 2', () => {
   steps(2);
-  expect(console.log.mock.calls[0][0]).toEqual("# ");
-  expect(console.log.mock.calls[1][0]).toEqual("##");
+  expect(console.log.mock.calls[0][0]).toEqual('# ');
+  expect(console.log.mock.calls[1][0]).toEqual('##');
   expect(console.log.mock.calls.length).toEqual(2);
 });
 
-test("steps called with n = 2 (recur)", () => {
+test('steps called with n = 2 (recur)', () => {
   stepsRecur(2);
-  expect(console.log.mock.calls[0][0]).toEqual("# ");
-  expect(console.log.mock.calls[1][0]).toEqual("##");
+  expect(console.log.mock.calls[0][0]).toEqual('# ');
+  expect(console.log.mock.calls[1][0]).toEqual('##');
   expect(console.log.mock.calls.length).toEqual(2);
 });
 
-test("steps called with n = 3", () => {
+test('steps called with n = 3', () => {
   steps(3);
-  expect(console.log.mock.calls[0][0]).toEqual("#  ");
-  expect(console.log.mock.calls[1][0]).toEqual("## ");
-  expect(console.log.mock.calls[2][0]).toEqual("###");
+  expect(console.log.mock.calls[0][0]).toEqual('#  ');
+  expect(console.log.mock.calls[1][0]).toEqual('## ');
+  expect(console.log.mock.calls[2][0]).toEqual('###');
   expect(console.log.mock.calls.length).toEqual(3);
 });
 
-test("steps called with n = 3 (recur)", () => {
+test('steps called with n = 3 (recur)', () => {
   stepsRecur(3);
-  expect(console.log.mock.calls[0][0]).toEqual("#  ");
-  expect(console.log.mock.calls[1][0]).toEqual("## ");
-  expect(console.log.mock.calls[2][0]).toEqual("###");
+  expect(console.log.mock.calls[0][0]).toEqual('#  ');
+  expect(console.log.mock.calls[1][0]).toEqual('## ');
+  expect(console.log.mock.calls[2][0]).toEqual('###');
   expect(console.log.mock.calls.length).toEqual(3);
 });

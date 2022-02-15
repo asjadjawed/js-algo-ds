@@ -1,6 +1,6 @@
-const HGS = require("./hourGlassSum");
+const HGS = require('./hourGlassSum');
 
-test("test hour glass sum", () => {
+test('test hour glass sum', () => {
   expect(
     HGS([
       [1, 1, 1, 0, 0, 0],
@@ -8,7 +8,7 @@ test("test hour glass sum", () => {
       [1, 1, 1, 0, 0, 0],
       [0, 0, 2, 4, 4, 0],
       [0, 0, 0, 2, 0, 0],
-      [0, 0, 1, 2, 4, 0],
+      [0, 0, 1, 2, 4, 0]
     ])
   ).toEqual(19);
 
@@ -19,7 +19,7 @@ test("test hour glass sum", () => {
       [1, 1, 1, 0, 0, 0],
       [0, 9, 2, -4, -4, 0],
       [0, 0, 0, -2, 0, 0],
-      [0, 0, -1, -2, -4, 0],
+      [0, 0, -1, -2, -4, 0]
     ])
   ).toEqual(13);
 
@@ -30,7 +30,7 @@ test("test hour glass sum", () => {
       [-9, -9, -9, 1, 2, 3],
       [0, 0, 8, 6, 6, 0],
       [0, 0, 0, -2, 0, 0],
-      [0, 0, 1, 2, 4, 0],
+      [0, 0, 1, 2, 4, 0]
     ])
   ).toEqual(28);
 });

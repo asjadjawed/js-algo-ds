@@ -1,6 +1,6 @@
 const sameFrequency = (n1, n2) => {
-  const arr1 = n1.toString().split("");
-  const arr2 = n2.toString().split("");
+  const arr1 = n1.toString().split('');
+  const arr2 = n2.toString().split('');
   if (arr1.length !== arr2.length) return false;
 
   for (const e of arr1) {

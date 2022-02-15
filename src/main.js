@@ -1,11 +1,11 @@
-const check = () => "JestTest";
+const check = () => 'JestTest';
 
 const main = () => {
-  console.log("Happy Coding! Check the folders :)");
+  console.log('Happy Coding! Check the folders :)');
 };
 
 main();
 
 module.exports = {
-  check,
+  check
 };

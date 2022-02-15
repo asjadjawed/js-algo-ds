@@ -1,4 +1,4 @@
-const Stack = require("../../datastructures/stack/Stack");
+const Stack = require('../../datastructures/stack/Stack');
 
 class Queue {
   constructor() {

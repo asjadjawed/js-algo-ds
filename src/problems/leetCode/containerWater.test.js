@@ -1,6 +1,6 @@
-const maxArea = require("./containerWater");
+const maxArea = require('./containerWater');
 
-test("return the max area of water array can hold", () => {
+test('return the max area of water array can hold', () => {
   expect(maxArea([])).toBeNull();
   expect(maxArea([1])).toBeNull();
   expect(maxArea([1, 1])).toEqual(1);

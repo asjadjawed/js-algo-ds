@@ -5,12 +5,12 @@ Bob removes two pebbles if an even number of pebbles is on the table, and one ot
 Given n initial pebbles and Alice starting, who wins the game? */
 
 const alicePlays = (n) => {
-  if (n === 0) return "Bob wins!";
+  if (n === 0) return 'Bob wins!';
   else return bobPlays(n - 1);
 };
 
 const bobPlays = (n) => {
-  if (n === 0) return "Alice wins!";
+  if (n === 0) return 'Alice wins!';
   if (n % 2 === 0) return alicePlays(n - 2);
   else return alicePlays(n - 1);
 };

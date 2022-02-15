@@ -4,7 +4,7 @@
  * @param {string} str
  */
 const reverseString = (str) => {
-  let reversed = "";
+  let reversed = '';
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
@@ -17,7 +17,7 @@ const reverseString = (str) => {
  * @param {string} str
  */
 const reverseStringRec = (str) => {
-  if (str.length === 0) return "";
+  if (str.length === 0) return '';
   return str[str.length - 1] + reverseString(str.slice(0, str.length - 1));
 };
 
@@ -26,10 +26,10 @@ const reverseStringRec = (str) => {
  *
  * @param {string} str
  */
-const reverseStringBuiltIn = (str) => str.split("").reverse().join("");
+const reverseStringBuiltIn = (str) => str.split('').reverse().join('');
 
 module.exports = {
   reverseString,
   reverseStringRec,
-  reverseStringBuiltIn,
+  reverseStringBuiltIn
 };

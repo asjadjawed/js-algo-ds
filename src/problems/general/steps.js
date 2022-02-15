@@ -5,7 +5,7 @@
  */
 const steps = (n) => {
   for (let i = 1; i <= n; i++) {
-    console.log("#".repeat(i) + " ".repeat(n - i));
+    console.log('#'.repeat(i) + ' '.repeat(n - i));
   }
 };
 
@@ -16,14 +16,14 @@ const steps = (n) => {
  */
 const stepsRecur = (n, i = 1) => {
   if (i === n) {
-    console.log("#".repeat(n));
+    console.log('#'.repeat(n));
     return;
   }
-  console.log("#".repeat(i) + " ".repeat(n - i));
+  console.log('#'.repeat(i) + ' '.repeat(n - i));
   return stepsRecur(n, i + 1);
 };
 
 module.exports = {
   steps,
-  stepsRecur,
+  stepsRecur
 };

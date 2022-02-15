@@ -1,10 +1,10 @@
 function isBalanced(s) {
   if (s.length < 2) return false;
-  const open = ["(", "[", "{"];
+  const open = ['(', '[', '{'];
   const matches = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
+    ')': '(',
+    ']': '[',
+    '}': '{'
   };
 
   const stack = [];

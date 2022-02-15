@@ -1,102 +1,102 @@
-const Graph = require("./UndirectedGraph");
+const Graph = require('./UndirectedGraph');
 
-describe("Adding a vertex and edge", () => {
+describe('Adding a vertex and edge', () => {
   let g;
 
   beforeEach(() => {
     g = new Graph();
   });
 
-  test("adding a new vertex", () => {
-    g.addVertex("c");
+  test('adding a new vertex', () => {
+    g.addVertex('c');
 
-    expect("c" in g.adjacencyList).toBe(true);
-    expect(g.adjacencyList["c"]).toEqual([]);
+    expect('c' in g.adjacencyList).toBe(true);
+    expect(g.adjacencyList['c']).toEqual([]);
 
-    expect(() => g.addVertex("c")).toThrow();
+    expect(() => g.addVertex('c')).toThrow();
   });
 
-  test("adding an edge", () => {
-    g.addVertex("a");
-    g.addVertex("b");
+  test('adding an edge', () => {
+    g.addVertex('a');
+    g.addVertex('b');
 
-    expect(() => g.addEdge("a", "c")).toThrow();
-    expect(() => g.addEdge("c", "a")).toThrow();
+    expect(() => g.addEdge('a', 'c')).toThrow();
+    expect(() => g.addEdge('c', 'a')).toThrow();
 
-    g.addEdge("a", "b");
-    expect(g.adjacencyList["a"][0]).toBe("b");
-    expect(g.adjacencyList["b"][0]).toBe("a");
+    g.addEdge('a', 'b');
+    expect(g.adjacencyList['a'][0]).toBe('b');
+    expect(g.adjacencyList['b'][0]).toBe('a');
   });
 
-  test("removing an edge", () => {
-    g.addVertex("a");
-    g.addVertex("b");
-    g.addVertex("c");
-    g.addEdge("a", "b");
-    g.addEdge("a", "c");
-    expect(g.adjacencyList["a"][0]).toBe("b");
-    expect(g.adjacencyList["b"][0]).toBe("a");
-    expect(g.adjacencyList["a"][1]).toBe("c");
-    expect(g.adjacencyList["c"][0]).toBe("a");
+  test('removing an edge', () => {
+    g.addVertex('a');
+    g.addVertex('b');
+    g.addVertex('c');
+    g.addEdge('a', 'b');
+    g.addEdge('a', 'c');
+    expect(g.adjacencyList['a'][0]).toBe('b');
+    expect(g.adjacencyList['b'][0]).toBe('a');
+    expect(g.adjacencyList['a'][1]).toBe('c');
+    expect(g.adjacencyList['c'][0]).toBe('a');
 
-    g.removeEdge("b", "a");
-    expect(g.adjacencyList["a"]).toEqual(["c"]);
-    expect(g.adjacencyList["c"]).toEqual(["a"]);
-    expect(g.adjacencyList["b"]).toEqual([]);
+    g.removeEdge('b', 'a');
+    expect(g.adjacencyList['a']).toEqual(['c']);
+    expect(g.adjacencyList['c']).toEqual(['a']);
+    expect(g.adjacencyList['b']).toEqual([]);
 
-    expect(() => g.removeEdge("bc", "a")).toThrow();
-    expect(() => g.removeEdge("a", "d")).toThrow();
+    expect(() => g.removeEdge('bc', 'a')).toThrow();
+    expect(() => g.removeEdge('a', 'd')).toThrow();
   });
 
-  test("remove vertex", () => {
-    g.addVertex("a");
-    g.addVertex("b");
-    g.addVertex("c");
-    g.addEdge("a", "b");
-    g.addEdge("a", "c");
-    g.addEdge("b", "c");
-    expect(g.adjacencyList["a"].includes("c")).toBe(true);
-    expect(g.adjacencyList["b"].includes("c")).toBe(true);
+  test('remove vertex', () => {
+    g.addVertex('a');
+    g.addVertex('b');
+    g.addVertex('c');
+    g.addEdge('a', 'b');
+    g.addEdge('a', 'c');
+    g.addEdge('b', 'c');
+    expect(g.adjacencyList['a'].includes('c')).toBe(true);
+    expect(g.adjacencyList['b'].includes('c')).toBe(true);
 
-    g.removeVertex("c");
-    expect(g._hasVertex("c")).toBe(false);
-    expect(g.adjacencyList["a"].includes("c")).toBe(false);
-    expect(g.adjacencyList["a"].includes("b")).toBe(true);
-    expect(g.adjacencyList["b"].includes("c")).toBe(false);
-    expect(g.adjacencyList["b"].includes("a")).toBe(true);
+    g.removeVertex('c');
+    expect(g._hasVertex('c')).toBe(false);
+    expect(g.adjacencyList['a'].includes('c')).toBe(false);
+    expect(g.adjacencyList['a'].includes('b')).toBe(true);
+    expect(g.adjacencyList['b'].includes('c')).toBe(false);
+    expect(g.adjacencyList['b'].includes('a')).toBe(true);
   });
 });
 
-describe("graph traversal", () => {
+describe('graph traversal', () => {
   let g;
 
   beforeEach(() => {
     g = new Graph();
-    g.addVertex("a");
-    g.addVertex("b");
-    g.addVertex("c");
-    g.addVertex("d");
-    g.addVertex("e");
-    g.addVertex("f");
+    g.addVertex('a');
+    g.addVertex('b');
+    g.addVertex('c');
+    g.addVertex('d');
+    g.addVertex('e');
+    g.addVertex('f');
 
-    g.addEdge("a", "b");
-    g.addEdge("a", "c");
-    g.addEdge("b", "d");
-    g.addEdge("c", "e");
-    g.addEdge("d", "e");
-    g.addEdge("d", "f");
-    g.addEdge("e", "f");
+    g.addEdge('a', 'b');
+    g.addEdge('a', 'c');
+    g.addEdge('b', 'd');
+    g.addEdge('c', 'e');
+    g.addEdge('d', 'e');
+    g.addEdge('d', 'f');
+    g.addEdge('e', 'f');
   });
 
-  test("recursive dfs", () => {
-    expect(g.dfsRecursive("a")).toEqual(["a", "b", "d", "e", "c", "f"]);
+  test('recursive dfs', () => {
+    expect(g.dfsRecursive('a')).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
   });
 
-  test("iterative dfs", () => {
-    expect(g.dfsIterative("a")).toEqual(["a", "b", "d", "e", "c", "f"]);
+  test('iterative dfs', () => {
+    expect(g.dfsIterative('a')).toEqual(['a', 'b', 'd', 'e', 'c', 'f']);
   });
 
-  test("iterative bfs", () => {
-    expect(g.bfs("a")).toEqual(["a", "b", "c", "d", "e", "f"]);
+  test('iterative bfs', () => {
+    expect(g.bfs('a')).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
   });
 });
